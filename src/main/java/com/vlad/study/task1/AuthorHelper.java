@@ -7,7 +7,6 @@ import org.hibernate.SessionFactory;
 
 import jakarta.persistence.Query;
 import jakarta.persistence.criteria.*;
-import java.util.Collection;
 import java.util.List;
 
 /**

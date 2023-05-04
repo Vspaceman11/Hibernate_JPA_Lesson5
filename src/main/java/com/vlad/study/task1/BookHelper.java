@@ -51,13 +51,14 @@ public class BookHelper {
         CriteriaBuilder cb = session.getCriteriaBuilder();
         CriteriaQuery cq = cb.createQuery(Book.class);
         Root<Author> root = cq.from(Book.class);
+
         cq.select(root);
+
         Query query = session.createQuery(cq);
         List<Book> bookList = query.getResultList();
-        //        Query query = session.createQuery("select b.name, a.name from Book as b " +
-//                "join Author as a ON a.id = b.authorId");
-//        List<Object> bookAndAuthor = query.list();
+
         session.close();
+
         return bookList;
     }
 }
